@@ -43,7 +43,7 @@ class EmpleadoController extends Controller
             $datosEmpleado['Foto'] = $request->file('Foto')->store('uploads', 'public');
         }
         Empleado::insert($datosEmpleado);
-        return response()->json($datosEmpleado);
+        return redirect('empleado')->with('mensaje', 'Empelado agregado con exito');
     }
 
     /**
@@ -106,7 +106,7 @@ class EmpleadoController extends Controller
             Empleado::destroy($id);
         }
         
-        return redirect('empleado');
+        return redirect('empleado')->with('mensaje', 'Empleado Borrado con exito!');
         
     }
 }
