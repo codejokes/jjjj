@@ -1,4 +1,10 @@
-Mostrar lista de empleados
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+
+
+
 @if(Session::has('mensaje'))
 {{Sesion::get('mensaje')}}
 @endif
@@ -26,7 +32,7 @@ Mostrar lista de empleados
             <td>
             <img src="{{ asset('storage').'/'.$empleado->Foto }}"  width="100"  alt="">
             </td>
-            <td>{{ $empleado->Foto }}</td>
+            
             <td>{{ $empleado->Nombre }}</td>
             <td>{{ $empleado->ApellidoPaterno }}</td>
             <td>{{ $empleado->ApellidoMaterno }}</td>
@@ -46,3 +52,5 @@ Mostrar lista de empleados
     </tbody>
 
 </table>
+</div>
+@endsection
