@@ -5,9 +5,7 @@
 
 
 
-@if(Session::has('mensaje'))
-{{Sesion::get('mensaje')}}
-@endif
+
 <a href="{{url('empleado/create')}}">Crear nuevo empleado</a>
 
 <table class="table table-light">
